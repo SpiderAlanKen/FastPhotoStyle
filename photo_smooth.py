@@ -10,6 +10,7 @@ import scipy.sparse
 import scipy.sparse.linalg
 from numpy.lib.stride_tricks import as_strided
 from PIL import Image
+import imageio
 
 
 class Propagator(nn.Module):
@@ -35,7 +36,7 @@ class Propagator(nn.Module):
         h = h1 - 4
         w = w1 - 4
         B = B[int((h1-h)/2):int((h1-h)/2+h),int((w1-w)/2):int((w1-w)/2+w),:]
-        content = scipy.misc.imresize(content,(h,w))
+        content = np.array(content.resize((h, w)))
         B = self.__replication_padding(B,2)
         content = self.__replication_padding(content,2)
         content = content.astype(np.float64)/255
