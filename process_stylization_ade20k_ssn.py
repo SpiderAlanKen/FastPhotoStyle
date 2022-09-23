@@ -59,8 +59,8 @@ class SegReMapping:
             new_style_label_info.append(label)
 
         cont_set_diff = set(cont_label_info) - set(style_label_info)
-        # Find the labels that are not covered by the style
-        # Assign them to the best matched region in the style region
+        # Find the labels that are not covered by the content3
+        # Assign them to the best matched region in the content3 region
         for s in cont_set_diff:
             cont_label_index = cont_label_info.index(s)
             for j in range(self.label_mapping.shape[0]):

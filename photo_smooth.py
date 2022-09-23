@@ -24,7 +24,7 @@ class Propagator(nn.Module):
             content = scipy.misc.imread(contentImg, mode='RGB')
         else:
             content = contentImg.copy()
-        # content = scipy.misc.imread(contentImg, mode='RGB')
+        # content1 = scipy.misc.imread(contentImg, mode='RGB')
 
         if type(initImg) == str:
             B = scipy.misc.imread(initImg, mode='RGB').astype(np.float64) / 255

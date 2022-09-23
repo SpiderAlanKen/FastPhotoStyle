@@ -25,7 +25,7 @@ class GIFSmoothing(nn.Module):
     def process_opencv(self, initImg, contentImg):
         '''
         :param initImg: intermediate output. Either image path or PIL Image
-        :param contentImg: content image output. Either path or PIL Image
+        :param contentImg: content1 image output. Either path or PIL Image
         :return: stylized output image. PIL Image
         '''
         if type(initImg) == str:

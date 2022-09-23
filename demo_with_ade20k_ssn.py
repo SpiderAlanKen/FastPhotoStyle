@@ -34,7 +34,7 @@ parser.add_argument('--segm_downsampling_rate', default=8, type=int, help='downs
 parser.add_argument('--gpu_id', default=0, type=int, help='gpu_id for evaluation')
 
 parser.add_argument('--model', default='./PhotoWCTModels/photo_wct.pth', help='Path to the PhotoWCT model. These are provided by the PhotoWCT submodule, please use `git submodule update --init --recursive` to pull.')
-parser.add_argument('--content_image_path', default="./images/content3.png")
+parser.add_argument('--content_image_path', default="./images/content4.png")
 parser.add_argument('--content_seg_path', default='./results/content3_seg.pgm')
 parser.add_argument('--style_image_path', default='./images/style3.png')
 parser.add_argument('--style_seg_path', default='./results/style3_seg.pgm')
